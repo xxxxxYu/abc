@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.dao.XiujiaInfoDao">
+
+	<select id="findByUserIdAndLevel" resultType="com.example.vo.XiujiaInfoVo">
+		select `xiujia_info`.* from `xiujia_info`
+
+		where 1 = 1
+		<if test="name != null and name != ''">
+			and `xiujia_info`.`userName` = #{name}
+		</if>
+		<if test="level != null and level != 0">
+			and `xiujia_info`.`level` = #{level}
+		</if>
+		<if test="status == 1">
+			and `xiujia_info`.`status` != '未提交'
+		</if>
+		order by `xiujia_info`.id
+	</select>
+
+	<select id="findAll" resultType="com.example.vo.XiujiaInfoVo">
+		select `xiujia_info`.*  from `xiujia_info`
+
+		order by `xiujia_info`.id
+	</select>
+
+
+
+	<select id="selectNumber" parameterType="com.example.vo.XiujiaInfoVo" resultType="Integer">
+		select IFNULL(sum(tianshu),0)
+		from xiujia_info
+		where userName = #{name}
+		  and `status` = '审核通过'
+		  and UNIX_TIMESTAMP(time) &lt; #{endTime}
+		  and UNIX_TIMESTAMP(time) &gt; #{startTime}
+
+	</select>
+
+</mapper>

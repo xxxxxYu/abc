@@ -1,0 +1,82 @@
+/*左侧导航菜单    home*/
+.sideMenu {
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.sideMenu .head {
+    background-color: #fff;
+    color: #666;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.sideMenu h3 {
+    background: #eee;
+    color: #666;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 20px;
+    border-top: 1px solid #e3e3e3;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.sideMenu ul .nLi i {
+    /*font-size: 16px;*/
+    margin-right: 20px;
+    /*position: relative;*/
+    /*top: 2px;*/
+}
+
+.sideMenu h3 {
+    position: relative;
+}
+
+.sideMenu ul .nLi .arrow {
+    font-size: 20px;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+
+.sideMenu ul .nLi.on .sub {
+    display: block;
+}
+
+.sideMenu ul .nLi .sub {
+    /*padding: 8px 0;*/
+    display: none;
+}
+
+.sideMenu ul .nLi .sub li {
+    height: 35px;
+    line-height: 35px;
+    list-style: none;
+}
+
+.sideMenu ul .nLi .sub li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    color: #666;
+    text-decoration: none;
+    padding: 0 40px;
+    font-weight: bold;
+}
+.sideMenu ul .nLi .sub li a.active {
+    background: #574b90;
+    color: #fff;
+}
+.sideMenu ul .nLi .sub li a:hover {
+    background:  #574b90;
+    color: #fff;
+}
+
+/*左侧导航菜单    end*/

@@ -1,0 +1,20 @@
+2022-03-21 10:10:40.026  INFO 11008 --- [main] com.example.Application                  : Starting Application on WINDOWS-SOP8NKC with PID 11008 (D:\study\AAA-ZZY\zzy\kaoqinsystem\target\classes started by EDZ in D:\study\AAA-ZZY\zzy\kaoqinsystem\src)
+2022-03-21 10:10:40.028  INFO 11008 --- [main] com.example.Application                  : No active profile set, falling back to default profiles: default
+2022-03-21 10:10:40.645  INFO 11008 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2022-03-21 10:10:40.652  INFO 11008 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-21 10:10:40.653  INFO 11008 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.12
+2022-03-21 10:10:40.656  INFO 11008 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Users\EDZ\.jdks\corretto-1.8.0_312\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\APP\bin\;%JAVA_HOME%\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\MySQL\MySQL Server 8.0\bin;D:\Git\cmd;C:\Program Files\TortoiseGit\bin;D:\nodejs\;C:\Program Files\Redis\;C:\Program Files (x86)\Yarn\bin\;D:\WorkAPP\;C:\Users\EDZ\AppData\Local\Microsoft\WindowsApps;D:\APP\;C:\Users\EDZ\AppData\Roaming\npm;C:\Users\EDZ\AppData\Local\Yarn\bin;D:\Microsoft VS Code\bin;.]
+2022-03-21 10:10:40.703  INFO 11008 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-21 10:10:40.703  INFO 11008 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 655 ms
+2022-03-21 10:10:40.716  INFO 11008 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2022-03-21 10:10:40.718  INFO 11008 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2022-03-21 10:10:40.718  INFO 11008 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2022-03-21 10:10:40.718  INFO 11008 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'formContentFilter' to: [/*]
+2022-03-21 10:10:40.718  INFO 11008 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2022-03-21 10:10:41.147  INFO 11008 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-03-21 10:10:41.317  INFO 11008 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2022-03-21 10:10:41.319  INFO 11008 --- [main] com.example.Application                  : Started Application in 1.489 seconds (JVM running for 2.417)
+2022-03-21 10:10:45.408  INFO 11008 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-21 10:10:45.408  INFO 11008 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-21 10:10:45.412  INFO 11008 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-03-21 10:10:45.421  WARN 11008 --- [http-nio-8888-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /
