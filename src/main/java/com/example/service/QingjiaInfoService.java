@@ -55,8 +55,8 @@ public class QingjiaInfoService {
         }
         return PageInfo.of(info);
     }
-    public int selectNumber(QingjiaInfo qingjiaInfo){
-        return qingjiaInfoDao.selectNumber(qingjiaInfo);
+    public int selectNumber(String name,Long firthDayLongtime,Long lastDayLongtime){
+        return qingjiaInfoDao.selectNumber(name,firthDayLongtime,lastDayLongtime);
     }
 
 }

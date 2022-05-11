@@ -43,8 +43,8 @@
                     <span v-if="user.name" style="color: #eee;">
                         <span style="color: #04bd4b; margin-right: 20px">{{user.name}}</span>
                         <a style="color: #eee;" href="javascript:void(0)" @click="logout">退出</a>
-                        <a style="color: #eee;" v-if="isCollect" style="margin-left: 10px"
-                           href="collectInfo.html">收藏夹</a>
+                        <a style="color: #eee;" v-if="isCollect" style="color: #eee;margin-left: 10px"
+                           href="messageInfoDetail.html">收藏夹</a>
                     </span>
                 </div>
                 <div class="col-md-2" style="text-align: right">
@@ -151,7 +151,7 @@
         data: {
             user: {},
             isShow: false,
-            isCollect: false
+            isCollect: true
         },
         created: function () {
             axios.get('/auth').then(res => {

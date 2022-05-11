@@ -26,13 +26,13 @@
 
 
 
-	<select id="selectNumber" parameterType="com.example.vo.XiujiaInfoVo" resultType="Integer">
+	<select id="selectNumber"  resultType="Integer">
 		select IFNULL(sum(tianshu),0)
 		from xiujia_info
 		where userName = #{name}
 		  and `status` = '审核通过'
-		  and UNIX_TIMESTAMP(time) &lt; #{endTime}
-		  and UNIX_TIMESTAMP(time) &gt; #{startTime}
+		  and UNIX_TIMESTAMP(time) &lt; #{lastDayLongtime}
+		  and UNIX_TIMESTAMP(time) &gt; #{firthDayLongtime}
 
 	</select>
 

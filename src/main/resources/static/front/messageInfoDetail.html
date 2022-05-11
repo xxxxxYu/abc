@@ -17,6 +17,7 @@
         [v-cloak] {
             display: none;
         }
+
         .ql-editor img {
             width: 600px;
         }
@@ -36,7 +37,8 @@
                     <span v-if="user.name" style="color: #eee;">
                         <span style="color: #04bd4b; margin-right: 20px">{{user.name}}</span>
                         <a style="color: #eee;" href="javascript:void(0)" @click="logout">退出</a>
-                        <a style="color: #eee;" v-if="isCollect" style="margin-left: 10px" href="collectInfo.html">收藏夹</a>
+                        <a style="color: #eee;" v-if="isCollect" style="margin-left: 10px"
+                           href="collectInfo.html">收藏夹</a>
                     </span>
                 </div>
                 <div class="col-md-2" style="text-align: right">
@@ -55,9 +57,9 @@
                     <ul style="display: flex;">
                         <li class="nav-item"><a href="index.html">首页</a></li>
                         <li class="nav-item"><a href="advertiserInfo.html">公告信息</a></li>
-			<li class="nav-item active"><a href="messageInfo.html">留言信息</a></li>
-			<li class="nav-item"><a href="qingjiaInfo.html">请假申请信息</a></li>
-			<li class="nav-item"><a href="xiujiaInfo.html">休假申请信息</a></li>
+                        <li class="nav-item active"><a href="messageInfo.html">留言信息</a></li>
+                        <li class="nav-item"><a href="qingjiaInfo.html">请假申请信息</a></li>
+                        <li class="nav-item"><a href="xiujiaInfo.html">休假申请信息</a></li>
 
                         <li class="nav-item" v-if="isShow"><a href="/end/page/index.html" target="_blank">进入后台系统</a>
                         </li>
@@ -75,20 +77,21 @@
                     <div class="panel panel-default">
                         <div class="panel-body bg-gray">
                             <div v-if="isPraise" style="text-align: right; font-size: 18px">
-                                <i class="fa fa-thumbs-o-up praise" @click="hotClick()"><span style="margin-left: 3px; font-size: 12px">{{praiseCount}}</span></i>
+                                <i class="fa fa-thumbs-o-up praise" @click="hotClick()"><span
+                                        style="margin-left: 3px; font-size: 12px">{{praiseCount}}</span></i>
                             </div>
-							<div class="row p-10" style="margin-bottom: 10px">
-								<div class="col-md-2">留言名称：</div>
-								<div class="col-md-10">{{ obj.name }}</div>
-							</div>
-							<div class="row p-10" style="margin-bottom: 10px">
-								<div class="col-md-2">留言内容：</div>
-								<div class="col-md-10">{{ obj.content }}</div>
-							</div>
-							<div class="row p-10" style="margin-bottom: 10px">
-								<div class="col-md-2">留言时间：</div>
-								<div class="col-md-10">{{ obj.time }}</div>
-							</div>
+                            <div class="row p-10" style="margin-bottom: 10px">
+                                <div class="col-md-2">留言名称：</div>
+                                <div class="col-md-10">{{ obj.name }}</div>
+                            </div>
+                            <div class="row p-10" style="margin-bottom: 10px">
+                                <div class="col-md-2">留言内容：</div>
+                                <div class="col-md-10">{{ obj.content }}</div>
+                            </div>
+                            <div class="row p-10" style="margin-bottom: 10px">
+                                <div class="col-md-2">留言时间：</div>
+                                <div class="col-md-10">{{ obj.time }}</div>
+                            </div>
 
                         </div>
                     </div>
@@ -154,12 +157,15 @@
                                 </div>
 
                                 <div class="col-md-6" style="margin-top: 10px">
-                                    <input type="text" class="form-control" style="width: 80%; display: inline-block" v-model="item.replayText">
+                                    <input type="text" class="form-control" style="width: 80%; display: inline-block"
+                                           v-model="item.replayText">
                                     <button class="btn btn-sm" @click="reply(item.id, item.replayText)">回复</button>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12"><hr  style="margin: 10px 0"/></div>
+                        <div class="col-md-12">
+                            <hr style="margin: 10px 0"/>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -225,7 +231,7 @@
                             let img = new Image();
                             img.src = this.fileSrc;
                             let _this = this;
-                            img.onload = function(){
+                            img.onload = function () {
                                 if (img.width > 590) {
                                     _this.imgWidth = "100%";
                                 } else {
@@ -331,7 +337,7 @@
             },
             logout() {
                 axios.get("/logout").then(res => {
-                    if(res.data.code === '0') {
+                    if (res.data.code === '0') {
                         location.href = '/front/index.html';
                     } else {
                         msg('error', res.data.msg);

@@ -15,6 +15,6 @@ public interface XiujiaInfoDao extends Mapper<XiujiaInfo> {
                                            @Param("level") Integer level,
                                            @Param("status") Integer status);
     List<XiujiaInfoVo> findAll();
-    public int selectNumber(XiujiaInfo xiujiaInfo);
+    public int selectNumber(String name,Long firthDayLongtime,Long lastDayLongtime);
 
 }

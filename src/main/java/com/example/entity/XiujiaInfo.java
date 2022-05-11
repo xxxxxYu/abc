@@ -28,8 +28,7 @@ public class XiujiaInfo {
     private String verifyName;
 
 
-    private Long startTime;
-    private Long endTime;
+
 
 
     public String getName() {
@@ -113,21 +112,6 @@ public class XiujiaInfo {
         return this.id;
     }
 
-    public Long getStartTime() {
-        return startTime;
-    }
-
-    public void setStartTime(Long startTime) {
-        this.startTime = startTime;
-    }
-
-    public Long getEndTime() {
-        return endTime;
-    }
-
-    public void setEndTime(Long endTime) {
-        this.endTime = endTime;
-    }
 
     @Override
     public String toString() {
@@ -142,8 +126,7 @@ public class XiujiaInfo {
                 ", status='" + status + '\'' +
                 ", reason='" + reason + '\'' +
                 ", verifyName='" + verifyName + '\'' +
-                ", startTime=" + startTime +
-                ", endTime=" + endTime +
+
                 '}';
     }
 }

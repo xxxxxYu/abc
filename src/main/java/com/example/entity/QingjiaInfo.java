@@ -28,10 +28,6 @@ public class QingjiaInfo {
     private String verifyName;
 
 
-    private Long startTime;
-    private Long endTime;
-
-
 
     public String getName() {
         return name;
@@ -127,24 +123,8 @@ public class QingjiaInfo {
                 ", status='" + status + '\'' +
                 ", reason='" + reason + '\'' +
                 ", verifyName='" + verifyName + '\'' +
-                ", startTime=" + startTime +
-                ", endTime=" + endTime +
+
                 '}';
     }
 
-    public Long getStartTime() {
-        return startTime;
-    }
-
-    public void setStartTime(Long startTime) {
-        this.startTime = startTime;
-    }
-
-    public Long getEndTime() {
-        return endTime;
-    }
-
-    public void setEndTime(Long endTime) {
-        this.endTime = endTime;
-    }
 }

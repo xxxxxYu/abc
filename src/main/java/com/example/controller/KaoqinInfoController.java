@@ -313,18 +313,12 @@ public class KaoqinInfoController {
         userInfo.setLastDay(lastDayLongtime);
         UserInfo userInfo1 = userInfoService.selectKaoQinInfo(userInfo);
 //查询请假天数
-        QingjiaInfo qingjiaInfo = new QingjiaInfo();
-        qingjiaInfo.setName(user.getName());
-        qingjiaInfo.setEndTime(lastDayLongtime);
-        qingjiaInfo.setStartTime(firthDayLongtime);
-        int qingJiaNumber = qingjiaInfoService.selectNumber(qingjiaInfo);
+
+        int qingJiaNumber = qingjiaInfoService.selectNumber(user.getName(),firthDayLongtime,lastDayLongtime);
 
 //查询休假天数
-        XiujiaInfo xiujiaInfo = new XiujiaInfo();
-        xiujiaInfo.setName(user.getName());
-        xiujiaInfo.setEndTime(lastDayLongtime);
-        xiujiaInfo.setStartTime(firthDayLongtime);
-        int xiuJiaNumber = xiujiaInfoService.selectNumber(xiujiaInfo);
+
+        int xiuJiaNumber = xiujiaInfoService.selectNumber(user.getName(),firthDayLongtime,lastDayLongtime);
         userInfo1.setQingJiaNumber(qingJiaNumber);
         userInfo1.setXiuJiaNumber(xiuJiaNumber);
         return userInfo1;

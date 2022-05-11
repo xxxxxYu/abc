@@ -15,5 +15,5 @@ public interface QingjiaInfoDao extends Mapper<QingjiaInfo> {
                                            @Param("status") Integer status);
     List<QingjiaInfoVo> findAll();
 
-    public int selectNumber(QingjiaInfo qingjiaInfo);
+    public int selectNumber(String name,Long firthDayLongtime,Long lastDayLongtime);
 }

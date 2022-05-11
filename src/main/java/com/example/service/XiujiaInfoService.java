@@ -58,7 +58,7 @@ public class XiujiaInfoService {
     }
 
 
-    public int selectNumber(XiujiaInfo xiujiaInfo){
-        return xiujiaInfoDao.selectNumber(xiujiaInfo);
+    public int selectNumber(String name,Long firthDayLongtime,Long lastDayLongtime){
+        return xiujiaInfoDao.selectNumber(name,firthDayLongtime,lastDayLongtime);
     }
 }
