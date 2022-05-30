@@ -74,7 +74,7 @@ public class KaoqinInfoController {
 
         List<KaoqinInfoVo> list = all.stream().filter(x -> x.getShangban().contains(today)).collect(Collectors.toList());
         if (!CollectionUtils.isEmpty(list)) {
-//            throw new CustomException("1001", "请勿重复打卡");
+            throw new CustomException("1001", "请勿重复打卡");
         }
         KaoqinInfo info = new KaoqinInfo();
 
@@ -240,7 +240,7 @@ public class KaoqinInfoController {
 
         List<KaoqinInfoVo> list = all.stream().filter(x -> x.getShangban().contains(today)).collect(Collectors.toList());
         if (!CollectionUtils.isEmpty(list)) {
-//            throw new CustomException("1001", "请勿重复打卡");
+            throw new CustomException("1001", "请勿重复打卡");
         }
         KaoqinInfo info = new KaoqinInfo();
 
